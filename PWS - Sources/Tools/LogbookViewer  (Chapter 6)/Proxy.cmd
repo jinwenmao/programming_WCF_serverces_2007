@@ -1,0 +1,1 @@
+SvcUtil http://localhost:8005/ /out:Proxy.cs /noConfig

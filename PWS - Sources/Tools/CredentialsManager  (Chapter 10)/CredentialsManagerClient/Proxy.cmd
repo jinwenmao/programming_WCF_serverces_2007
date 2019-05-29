@@ -1,0 +1,1 @@
+SvcUtil http://localhost/CredentialsService/AspNetSqlProviderService.svc /Out:Proxy.cs /noconfig

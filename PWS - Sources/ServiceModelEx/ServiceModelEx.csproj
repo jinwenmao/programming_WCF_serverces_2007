@@ -1,0 +1,179 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0858C710-AF53-4049-B98E-CFE3638D1228}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceModelEx</RootNamespace>
+    <AssemblyName>ServiceModelEx</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingRequirementAttribute.cs" />
+    <Compile Include="Duplex\DuplexChannelFactory.cs" />
+    <Compile Include="Errors\DebugHelper.cs" />
+    <Compile Include="MetadataHelper.cs" />
+    <Compile Include="Data\GenericDataContractSerializer.cs" />
+    <Compile Include="Duplex\ClientBaseAddressBehavior.cs" />
+    <Compile Include="PublishSubscribe\PersistentSubscriptionServiceProxy.cs" />
+    <Compile Include="Queueing\ResponseClientBase.cs" />
+    <Compile Include="Queueing\ResponseScope.cs" />
+    <Compile Include="Queueing\ResponseContext.cs" />
+    <Compile Include="Queueing\QueuedServiceHelper.cs" />
+    <Compile Include="Security\SecureDuplexChannelFactory.cs" />
+    <Compile Include="Security\SecureChannelFactory.cs" />
+    <Compile Include="Security\SecureDuplexClientBase.cs" />
+    <Compile Include="Security\ServiceSecurity.cs" />
+    <Compile Include="Security\SecureClientBase.cs" />
+    <Compile Include="Security\SecurityHelper.cs" />
+    <Compile Include="Security\SecurityBehaviorAttribute.cs" />
+    <Compile Include="Security\SecurityBehavior.cs" />
+    <Compile Include="ThreadAffinity\AffinitySynchronizer.cs" />
+    <Compile Include="Duplex\GenericEventHandler.cs" />
+    <Compile Include="Errors\CallbackErrorHandlerAttribute.cs" />
+    <Compile Include="Errors\ErrorHandlerAttribute.cs" />
+    <Compile Include="Hosting\AppDomainHost.cs" />
+    <Compile Include="Data\Collection.cs" />
+    <Compile Include="Data\DataTableHelper.cs" />
+    <Compile Include="Errors\ErrorHandlerHelper.cs" />
+    <Compile Include="Errors\LogbookEntryClient.cs" />
+    <Compile Include="Errors\LogbookManagerProxy.cs" />
+    <Compile Include="Hosting\ServiceHostActivator.cs" />
+    <Compile Include="Hosting\ServiceHost.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PublishSubscribe\PublishService.cs" />
+    <Compile Include="PublishSubscribe\PublishSubscribeDataSet.Designer.cs" />
+    <Compile Include="PublishSubscribe\PubSubContracts.cs" />
+    <Compile Include="PublishSubscribe\SubscriptionManager.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Duplex\DuplexClientBase.cs" />
+    <Compile Include="Hosting\InProcFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Duplex\InstanceContext.cs" />
+    <Compile Include="Duplex\WsDualProxyHelper.cs" />
+    <Compile Include="ThreadAffinity\CallbackThreadAffinityBehaviorAttribute.cs" />
+    <Compile Include="ThreadAffinity\ThreadAffinityHelper.cs" />
+    <Compile Include="ThreadAffinity\ThreadAffinityBehaviorAttribute.cs" />
+    <Compile Include="Transactions\ResouceManager.cs" />
+    <Compile Include="Transactions\Transactional.cs" />
+    <Compile Include="Transactions\TransactionalArray.cs" />
+    <Compile Include="Transactions\TransactionalCollection.cs" />
+    <Compile Include="Transactions\TransactionalDictionary.cs" />
+    <Compile Include="Transactions\TransactionalLinkedList.cs" />
+    <Compile Include="Transactions\TransactionalList.cs" />
+    <Compile Include="Transactions\TransactionalLock.cs" />
+    <Compile Include="Transactions\TransactionalQueue.cs" />
+    <Compile Include="Transactions\TransactionalSortedDictionary.cs" />
+    <Compile Include="Transactions\TransactionalSortedList.cs" />
+    <Compile Include="Transactions\TransactionalStack.cs" />
+    <Compile Include="Windows Forms\ActivationMonitor.cs" />
+    <Compile Include="Windows Forms\AppSingleton.cs" />
+    <Compile Include="Windows Forms\FormHost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\SafeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PublishSubscribe\PublishSubscribeDataSet.xsc">
+      <DependentUpon>PublishSubscribeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PublishSubscribe\PublishSubscribeDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PublishSubscribe\PublishSubscribeDataSet.xss">
+      <DependentUpon>PublishSubscribeDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Windows Forms\SafeButton.resx">
+      <DependentUpon>SafeButton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SafeListBox.resx">
+      <DependentUpon>SafeListBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SafeProgressBar.resx">
+      <DependentUpon>SafeProgressBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SafeStatusBar.resx">
+      <DependentUpon>SafeStatusBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\SafeTextBox.resx">
+      <DependentUpon>SafeTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
